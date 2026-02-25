@@ -1,0 +1,206 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    h1{
+        font-size: 5rem;
+        font-weight: bold; 
+        color:  rgb(32, 33, 33);
+        line-height: 1;
+        vertical-align: top;
+        margin: 0;
+        margin-top: -1rem;
+        padding: 0.5rem 0.5rem;
+        transform: scaleY(1.2);
+    }
+    h2{
+         border-bottom: solid 3px #85D4EF;
+          letter-spacing: 0.08em;
+    }
+     h3{
+         border-top: solid 4px #85D4EF;
+    }
+    h2, h3{
+        font-weight: regular;
+        margin: 0;
+        padding: 0;
+        color: rgb(255, 143, 223);
+        width: 250px;
+
+    }
+
+  
+    }
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+.thing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px rgba(92, 92, 92, 0.5) solid;
+    border-radius: 0%;
+    padding: 2rem 5rem 2rem 5rem;
+    background: rgb(102, 215, 243);
+    margin: 2rem;
+    position: relative;
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 0 20px rgba(139, 115, 85, 0.2), 
+        inset 0 0 40px rgba(139, 115, 85, 0.1),
+        0 0 0 15px rgba(242, 242, 242, 1),
+        0 4px 8px 15px rgba(60, 60, 60, 0.3);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(139, 115, 85, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(160, 130, 98, 0.08) 1px, transparent 1px);
+    background-size: 15px 15px, 20px 20px;
+}
+.thing img{
+    width: 150px;
+    display: block;
+    margin: -3px 0;
+    padding: -1rem;
+    position: relative;
+    z-index: 2;
+}
+.thing img#body{
+    z-index: 3;
+}
+.thing h2{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+    color: rgb(254, 255, 249);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+button{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+@keyframes dropIn {
+    from {
+        transform: translateY(-400px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(400px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(550px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.drop-out {
+    animation: dropOut 0.3s ease-in forwards;
+}
+
+.drop-head {
+    animation: dropIn 0.3s ease-out forwards;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+}
+
+.drop-body {
+    animation: dropIn 0.3s ease-out forwards;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+.drop-legs {
+    animation: dropIn 0.3s ease-out forwards;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.drop-name {
+    animation: dropIn 0.4s ease-out forwards;
+    animation-delay: 0;
+    animation-fill-mode: both;
+}
+
+.slide-first-name {
+    animation: slideInLeft 0.4s ease-out forwards;
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
+}
+
+.slide-the {
+    animation: slideInRight 0.4s ease-out forwards;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+.slide-component-name {
+    animation: slideInRight 0.4s ease-out forwards;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+}
+
+#first-name, #the-word, #component-name {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-200px);
+}
+
+#the-word, #component-name {
+    transform: translateX(200px);
+}
+
+.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.hidden#first-name {
+    transform: translateX(-200px) !important;
+}
+
+.hidden#the-word, .hidden#component-name {
+    transform: translateX(200px) !important;
+}
